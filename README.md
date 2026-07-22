@@ -69,11 +69,3 @@ Currently deployed to shinyapps.io (see `rsconnect/`, gitignored — it's enviro
 ```r
 rsconnect::deployApp()
 ```
-
-## Before publishing to GitHub
-
-- [ ] **Confidentiality/IP check.** This tool was built for a client engagement. Before making the repo public, confirm with your firm/engagement lead that the code and methodology are clear to open-source, and that no client-identifying details, real facility data, or proprietary assumptions are embedded anywhere (the current specialty presets in `app.r` are generic specialty names/ratios, not client-specific figures — but double check before pushing).
-- [ ] **Unrelated files.** `data/` (`languages.csv`, `languages_raw.csv`, `languages.R`) and `misc/` (`almostVF.R`, `edits.R`, `jul18.R`) are leftovers from other work, not used by `app.r`. Decide whether to delete them or leave them out of the initial commit — no changes were made to these per your request.
-- [ ] **License.** No `LICENSE` file exists yet. Add one (e.g., MIT) once you've confirmed you're allowed to open-source this — GitHub's repo-creation flow can generate one for you.
-- [ ] **`.gitignore`.** Added — excludes `.Rhistory`, `.Rproj.user/`, `rsconnect/`, and `.DS_Store`.
-- [ ] **Secrets.** No API keys or credentials are referenced in the code; `rsconnect/` (gitignored) is the only place account-identifying info lives.
